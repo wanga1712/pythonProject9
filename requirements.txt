@@ -1,0 +1,10 @@
+binance_futures
+python-dotenv
+dotenv
+os
+io
+sys
+time
+requests
+os
+datetime
