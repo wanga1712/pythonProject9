@@ -127,6 +127,8 @@ class DatabaseManager:
             self.logger.error(f"Failed to fetch data for chart: {str(e)}")
             return pd.DataFrame()
 
+
+
     def close_connection(self):
         self.cursor.close()
         self.connection.close()
