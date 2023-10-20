@@ -62,7 +62,6 @@ def calculate_beer_points(price_data, length=10):
 
 
 
-
 # ------------------------------------------------
 def display_chart(data_with_ma, beer_points_df):
     # Create a candlestick chart
@@ -115,49 +114,6 @@ def display_chart(data_with_ma, beer_points_df):
         print(beer_points_df.tail(100))
 
     fig.show()
-
-
-
-
-
-
-# ---------------------------------
-
-# def plot_pivot_points(beer_points_df):
-#     print("\nBeer Points Data:")
-#     with pd.option_context('display.max_rows', None, 'display.max_columns', None):
-#         print(beer_points_df.tail(100))
-#
-#     fig = go.Figure()
-#
-#     prev_row = None
-#     for index, row in beer_points_df.iterrows():
-#         if not pd.isnull(row['Date']):
-#             marker_symbol = 'triangle-up' if row['Pivot Type'] in ['Potential Low', 'Confirmed Low'] else 'triangle-down'
-#             marker_color = 'green' if row['Pivot Type'] in ['Potential Low', 'Confirmed Low'] else 'red'
-#
-#             if prev_row is not None:
-#                 # Draw a line from the previous point to the current point
-#                 fig.add_trace(go.Scatter(x=[prev_row['Date'], row['Date']],
-#                                          y=[prev_row['Pivot Value'], row['Pivot Value']],
-#                                          mode='lines',
-#                                          line=dict(color='black', width=2),
-#                                          showlegend=False))
-#
-#             fig.add_trace(go.Scatter(x=[row['Date']], y=[row['Pivot Value']],
-#                                      mode='markers',
-#                                      marker=dict(symbol=marker_symbol,
-#                                                  size=10,
-#                                                  color=marker_color),
-#                                      name=row['Pivot Type']))
-#
-#         prev_row = row
-#
-#     fig.update_layout(title='Pivot Points',
-#                       xaxis_title='Date',
-#                       yaxis_title='Price')
-#
-#     fig.show()
 
 
 # Usage
